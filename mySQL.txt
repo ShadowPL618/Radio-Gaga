@@ -1,0 +1,111 @@
+-- ============================================
+-- IMPERIO RADIO DATABASE SETUP
+-- Legion Radio Station Database
+-- ============================================
+
+-- Create database
+CREATE DATABASE IF NOT EXISTS Imperio_Radio;
+USE Imperio_Radio;
+
+-- ============================================
+-- ARTISTS TABLE
+-- ============================================
+
+CREATE TABLE artists (
+    artist_id INT PRIMARY KEY AUTO_INCREMENT,
+    artist_name VARCHAR(100) NOT NULL,
+    artist_image VARCHAR(255),
+    artist_bio TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Insert artists
+INSERT INTO artists (artist_name, artist_image, artist_bio) VALUES
+('Skillet', 'images/skillet.jpg', 'American Christian rock band formed in Memphis, Tennessee'),
+('Sabaton', 'images/sabaton.jpg', 'Swedish heavy metal band with military history themes'),
+('Linkin Park', 'images/linkinpark.jpg', 'American rock band known for nu-metal and alternative rock');
+
+-- ============================================
+-- ALBUMS TABLE
+-- ============================================
+
+CREATE TABLE albums (
+    album_id INT PRIMARY KEY AUTO_INCREMENT,
+    album_title VARCHAR(150) NOT NULL,
+    artist_id INT NOT NULL,
+    album_cover VARCHAR(255),
+    release_year INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (artist_id) REFERENCES artists(artist_id) ON DELETE CASCADE
+);
+
+-- Insert albums
+INSERT INTO albums (album_title, artist_id, album_cover, release_year) VALUES
+('Awake', 1, 'images/awake.jpg', 2009),
+('Victorious', 1, 'images/victorious.jpg', 2019),
+('Legends', 2, 'images/legends.jpg', 2022),
+('Primo Victoria', 2, 'images/primovictoria.jpg', 2005),
+('Hybrid Theory', 3, 'images/hybridtheory.jpg', 2000),
+('Meteora', 3, 'images/meteora.jpg', 2003);
+
+-- ============================================
+-- TRACKS TABLE
+-- ============================================
+
+CREATE TABLE tracks (
+    track_id INT PRIMARY KEY AUTO_INCREMENT,
+    track_title VARCHAR(150) NOT NULL,
+    artist_id INT NOT NULL,
+    album_id INT NOT NULL,
+    duration VARCHAR(10),
+    genre VARCHAR(50),
+    audio_file VARCHAR(255),
+    video_file VARCHAR(255),
+    track_number INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (artist_id) REFERENCES artists(artist_id) ON DELETE CASCADE,
+    FOREIGN KEY (album_id) REFERENCES albums(album_id) ON DELETE CASCADE
+);
+
+-- Insert Skillet tracks
+INSERT INTO tracks (track_title, artist_id, album_id, duration, genre, audio_file, video_file, track_number) VALUES
+('Monster', 1, 1, '2:58', 'Rock', 'audio/monster.mp3', 'video/monster.mp4', 1),
+('Hero', 1, 1, '3:04', 'Rock', 'audio/hero.mp3', 'video/hero.mp4', 2),
+('Legendary', 1, 2, '3:19', 'Rock', 'audio/legendary.mp3', 'video/legendary.mp4', 1),
+('Anchor', 1, 2, '3:49', 'Rock', 'audio/anchor.mp3', 'video/anchor.mp4', 2);
+
+-- Insert Sabaton tracks
+INSERT INTO tracks (track_title, artist_id, album_id, duration, genre, audio_file, video_file, track_number) VALUES
+('Dreadnought', 2, 3, '3:52', 'Metal', 'audio/dreadnought.mp3', 'video/dreadnought.mp4', 1),
+('Crossing the Rubicon', 2, 3, '4:01', 'Metal', 'audio/crossingtherubicon.mp3', 'video/crossingtherubicon.mp4', 2),
+('Lightning at the Gates', 2, 3, '3:45', 'Metal', 'audio/lightningatthegates.mp3', 'video/lightningatthegates.mp4', 3),
+('Wolfpack', 2, 4, '3:41', 'Metal', 'audio/wolfpack.mp3', 'video/wolfpack.mp4', 1),
+('Bismarck', 2, 4, '5:42', 'Metal', 'audio/bismarck.mp3', 'video/bismarck.mp4', 2),
+('Counterstrike', 2, 4, '3:56', 'Metal', 'audio/counterstrike.mp3', 'video/counterstrike.mp4', 3);
+
+-- Insert Linkin Park tracks
+INSERT INTO tracks (track_title, artist_id, album_id, duration, genre, audio_file, video_file, track_number) VALUES
+('In the End', 3, 5, '3:36', 'Nu-Metal', 'audio/in-the-end.mp3', 'video/in-the-end.mp4', 1),
+('Numb', 3, 6, '3:07', 'Nu-Metal', 'audio/numb.mp3', 'video/numb.mp4', 1),
+('Somewhere I Belong', 3, 6, '3:34', 'Nu-Metal', 'audio/somewhere-i-belong.mp3', 'video/somewhere-i-belong.mp4', 2),
+('Breaking the Habit', 3, 6, '3:16', 'Alternative Rock', 'audio/breaking-the-habit.mp3', 'video/breaking-the-habit.mp4', 3);
+
+-- ============================================
+-- USEFUL QUERIES FOR TESTING
+-- ============================================
+
+-- Get all tracks with artist and album info
+-- SELECT t.track_title, a.artist_name, al.album_title, t.duration, t.genre, t.audio_file, t.video_file
+-- FROM tracks t
+-- JOIN artists a ON t.artist_id = a.artist_id
+-- JOIN albums al ON t.album_id = al.album_id
+-- ORDER BY a.artist_name, al.album_title, t.track_number;
+
+-- Get tracks by specific artist
+-- SELECT * FROM tracks WHERE artist_id = 1;
+
+-- Count tracks per artist
+-- SELECT a.artist_name, COUNT(t.track_id) as track_count
+-- FROM artists a
+-- LEFT JOIN tracks t ON a.artist_id = t.artist_id
+-- GROUP BY a.artist_id;

@@ -1,0 +1,1027 @@
+/* ============================================
+   LEGION RADIO STATION - ENHANCED CSS
+   Imperio Radio - Ave, True to Caesar
+   ============================================ */
+
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body - Legion red gradient */
+body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: linear-gradient(135deg, #1a0000 0%, #4a0000 50%, #8b0000 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #cccccc;
+}
+
+/* ============================================
+   HEADER NAVIGATION - FLEXBOX
+   ============================================ */
+
+/* Header container with flexbox */
+header {
+    background-color: rgba(20, 20, 20, 0.95);
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid #8b0000;
+    border-top: 3px solid #d4af37;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo with gold glow */
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: #d4af37;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+}
+
+/* Logo hover red effect */
+.logo:hover {
+    color: #ff4444;
+    transform: scale(1.05);
+    text-shadow: 0 0 15px rgba(255, 68, 68, 0.7);
+}
+
+/* Navigation flexbox layout */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Navigation gold links */
+nav a {
+    text-decoration: none;
+    color: #d4af37;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+
+/* Navigation hover dark red */
+nav a:hover {
+    background-color: #8b0000;
+    color: #d4af37;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 0, 0, 0.5);
+}
+
+/* Active navigation current page */
+nav a.active {
+    background-color: #8b0000;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+}
+
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
+
+/* Main container dark theme */
+main {
+    background-color: #1a1a1a;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 2px solid #8b0000;
+}
+
+/* Main heading red color */
+h1 {
+    color: #ff4444;
+    margin-bottom: 10px;
+    font-size: 36px;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+    font-family: 'Georgia', serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Subheading gold color */
+h2 {
+    color: #d4af37;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Georgia', serif;
+}
+
+/* ============================================
+   VIDEO PLAYER SECTION - FLEXBOX
+   ============================================ */
+
+/* Video player main container */
+.video-player-container {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Video display area */
+.video-display {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #000;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Video element styling */
+.video-display video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Video info panel flexbox */
+.video-info {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(139, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 1px solid #8b0000;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Current song title */
+.video-info h3 {
+    color: #d4af37;
+    font-size: 24px;
+    font-family: 'Georgia', serif;
+}
+
+/* Current artist name */
+.video-info p {
+    color: #cccccc;
+    font-size: 16px;
+}
+
+/* ============================================
+   ARTIST GALLERY - FLEXBOX GRID
+   ============================================ */
+
+/* Artist gallery flex container */
+.artist-gallery {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual artist card */
+.artist-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    flex: 0 1 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Artist card hover effect */
+.artist-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+}
+
+/* Artist image styling */
+.artist-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #8b0000;
+}
+
+/* Artist name label */
+.artist-card h3 {
+    color: #d4af37;
+    font-size: 20px;
+    font-family: 'Georgia', serif;
+}
+
+/* Artist song count */
+.artist-card p {
+    color: #999;
+    font-size: 14px;
+}
+
+/* ============================================
+   ARTIST INFO PAGE
+   ============================================ */
+
+/* Artists info section container */
+.artists-info-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Individual artist info card */
+.artist-info-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Artist card hover effect */
+.artist-info-card:hover {
+    border-color: #d4af37;
+    box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+    transform: translateY(-3px);
+}
+
+/* Artist image container */
+.artist-image-container {
+    flex-shrink: 0;
+}
+
+/* Artist info image */
+.artist-info-image {
+    width: 250px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Artist details container */
+.artist-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Artist name */
+.artist-details h3 {
+    color: #d4af37;
+    font-size: 28px;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Artist bio text */
+.artist-bio {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Artist stats container */
+.artist-stats {
+    display: flex;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+/* Individual stat item */
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(139, 0, 0, 0.3);
+    border-radius: 5px;
+    border: 1px solid #8b0000;
+}
+
+/* Stat number */
+.stat-number {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+/* Stat label */
+.stat-label {
+    color: #999;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* View artist button */
+.view-artist-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #8b0000 0%, #ff4444 100%);
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(139, 0, 0, 0.6);
+    border: 1px solid #d4af37;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+    align-self: flex-start;
+}
+
+/* View artist button hover */
+.view-artist-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 68, 68, 0.8);
+}
+
+/* ============================================
+   ALBUMS SECTION
+   ============================================ */
+
+/* Albums section container */
+.albums-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Individual album container */
+.album-container {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Album header flexbox */
+.album-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #8b0000;
+}
+
+/* Album cover image */
+.album-cover {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Album info text */
+.album-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Album title */
+.album-info h3 {
+    color: #d4af37;
+    font-size: 24px;
+    font-family: 'Georgia', serif;
+    margin: 0;
+}
+
+/* Album artist */
+.album-info p {
+    color: #cccccc;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Album year */
+.album-year {
+    color: #999;
+    font-size: 14px;
+}
+
+/* ============================================
+   TABLE STYLING - PLAYLIST
+   ============================================ */
+
+/* Main table container */
+.playlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Legacy ID support */
+#playlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header red gradient */
+.playlist-table thead,
+#playlist-table thead {
+    background: linear-gradient(135deg, #8b0000 0%, #4a0000 100%);
+    color: #d4af37;
+}
+
+/* Table header cells */
+.playlist-table th,
+#playlist-table th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+}
+
+/* Table data cells */
+.playlist-table td,
+#playlist-table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+/* Zebra striping odd rows */
+.playlist-table tbody tr:nth-child(odd),
+#playlist-table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+/* Zebra striping even rows */
+.playlist-table tbody tr:nth-child(even),
+#playlist-table tbody tr:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+/* Table row hover red */
+.playlist-table tbody tr:hover,
+#playlist-table tbody tr:hover {
+    background-color: #3a0000;
+    transform: scale(1.01);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Active track styling */
+.active-track {
+    background-color: #4a0000 !important;
+    border-left: 4px solid #d4af37;
+}
+
+/* ============================================
+   TABLE COLUMN STYLING
+   ============================================ */
+
+/* Song title bold white */
+.song-title {
+    font-weight: 600;
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+}
+
+/* Artist gold text */
+.artist {
+    color: #d4af37;
+}
+
+/* Duration monospace gray */
+.duration {
+    color: #999;
+    font-family: 'Courier New', monospace;
+}
+
+/* Genre red text */
+.genre {
+    color: #ff4444;
+    font-weight: 500;
+}
+
+/* ============================================
+   AUDIO PLAYER STYLING
+   ============================================ */
+
+/* Audio cell center */
+.audio-cell {
+    text-align: center;
+}
+
+/* Audio player element */
+audio {
+    width: 200px;
+    height: 30px;
+    outline: none;
+}
+
+/* Audio controls panel dark */
+audio::-webkit-media-controls-panel {
+    background-color: #2a2a2a;
+}
+
+/* Audio controls play button */
+audio::-webkit-media-controls-play-button {
+    background-color: #d4af37;
+    border-radius: 50%;
+}
+
+/* No audio text gray */
+.no-audio {
+    color: #666;
+    font-style: italic;
+    font-size: 12px;
+}
+
+/* ============================================
+   HOME PAGE CONTENT - FLEXBOX
+   ============================================ */
+
+/* Homepage content flexbox */
+.home-content {
+    padding: 40px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Homepage paragraph light gray */
+.home-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #cccccc;
+    max-width: 800px;
+}
+
+/* CTA button red gradient */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #8b0000 0%, #ff4444 100%);
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 0, 0, 0.6);
+    border: 1px solid #d4af37;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+
+/* CTA button hover lift */
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 68, 68, 0.8);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* No results message */
+.no-results {
+    text-align: center;
+    padding: 30px;
+    color: #999;
+    font-style: italic;
+}
+
+/* Loading indicator */
+.loading {
+    text-align: center;
+    color: #d4af37;
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* Error message */
+.error-message {
+    background-color: rgba(139, 0, 0, 0.3);
+    border: 1px solid #8b0000;
+    color: #ff4444;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* ============================================
+   ARTISTS DETAIL PAGE
+   ============================================ */
+
+/* Artists detail section */
+.artists-detail-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+/* Artist detail card */
+.artist-detail-card {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Artist subheading */
+.artist-detail-card h2 {
+    color: #d4af37;
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 10px;
+}
+
+/* Artist detail content flexbox */
+.artist-detail-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Artist detail image */
+.artist-detail-image {
+    flex-shrink: 0;
+}
+
+.artist-detail-image img {
+    width: 250px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Artist detail text */
+.artist-detail-text {
+    flex: 1;
+}
+
+.artist-detail-text p {
+    color: #cccccc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.artist-detail-text h3 {
+    color: #d4af37;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Top songs list */
+.top-songs-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.top-songs-list li {
+    color: #cccccc;
+    padding: 8px 15px;
+    margin-bottom: 8px;
+    background-color: rgba(139, 0, 0, 0.3);
+    border-left: 3px solid #d4af37;
+    border-radius: 3px;
+}
+
+/* ============================================
+   POPULAR ARTISTS TABLE
+   ============================================ */
+
+/* Table container */
+.table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+/* Popular artists table */
+.popular-artists-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Table header */
+.popular-artists-table thead {
+    background: linear-gradient(135deg, #8b0000 0%, #4a0000 100%);
+    color: #d4af37;
+}
+
+.popular-artists-table th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+}
+
+/* Table body cells */
+.popular-artists-table td {
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+}
+
+/* Zebra striping */
+.popular-artists-table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+.popular-artists-table tbody tr:nth-child(even) {
+    background-color: #1f1f1f;
+}
+
+/* Table row hover */
+.popular-artists-table tbody tr:hover {
+    background-color: #3a0000;
+    transition: all 0.3s ease;
+}
+
+/* Artist link styling */
+.artist-link {
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.artist-link:hover {
+    color: #ff4444;
+    text-decoration: underline;
+}
+
+/* YouTube cell center */
+.youtube-cell {
+    text-align: center;
+}
+
+/* YouTube icon */
+.youtube-icon {
+    width: 30px;
+    height: 30px;
+    transition: all 0.3s ease;
+}
+
+.youtube-link:hover .youtube-icon {
+    transform: scale(1.2);
+}
+
+/* ============================================
+   CONTACT FORM
+   ============================================ */
+
+/* Contact form container */
+.contact-form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Form labels */
+.form-group label {
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: 'Georgia', serif;
+    letter-spacing: 0.5px;
+}
+
+/* Form inputs and textarea */
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #8b0000;
+    border-radius: 5px;
+    color: #cccccc;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Textarea resize */
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Form buttons container */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Submit button */
+.submit-button {
+    flex: 1;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #8b0000 0%, #ff4444 100%);
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 68, 68, 0.8);
+}
+
+/* Reset button */
+.reset-button {
+    flex: 1;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #d4af37;
+    border: 1px solid #8b0000;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+
+.reset-button:hover {
+    background-color: #8b0000;
+    transform: translateY(-2px);
+}
+
+/* Thank you message */
+.thank-you-message {
+    background-color: rgba(139, 0, 0, 0.3);
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.thank-you-message p {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - FLEXBOX
+   ============================================ */
+
+/* Tablet and below */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .artist-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .artist-info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .artist-stats {
+        justify-content: center;
+    }
+    
+    .view-artist-button {
+        align-self: center;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    .album-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .artist-detail-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .artist-detail-text p {
+        text-align: left;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+    }
+    
+    .popular-artists-table {
+        font-size: 12px;
+    }
+    
+    .popular-artists-table th,
+    .popular-artists-table td {
+        padding: 10px 8px;
+    }
+}
